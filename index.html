@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RelaxVN</title>
+        <!-- Link Favicon -->
+        <link rel="website icon" type="png" href="./assets/img/Favicon.png" />
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/customize.css" />
+    </head>
+
+    <body style="height: 6000px">
+        <!-- Header Navbar -->
+        <header class="header fixed">
+            <!-- Navbar  -->
+            <div class="main-content">
+                <div class="home-nav">
+                    <div class="home-logo">
+                        <a href="#">
+                            <img
+                                src="./assets/img/Favicon.png"
+                                alt="HomePage"
+                            />
+                            <p class="homepage">RelaxVN</p>
+                        </a>
+                    </div>
+                    <div class="main-nav">
+                        <ul>
+                            <li>
+                                <a href="#musics">Âm nhạc</a>
+                            </li>
+                            <li>
+                                <a href="#film">Phim hay</a>
+                            </li>
+                            <li>
+                                <a href="#game">Tin Game</a>
+                            </li>
+                            <li>
+                                <a href="#tech">Tin công nghệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Action -->
+                    <div class="action">
+                        <a href="#!" class="sign-in-btn"> Sign in </a>
+
+                        <a href="#!" class="btn sign-up-btn"> Sign up </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main content -->
+        <main>
+            <!-- music -->
+            <section class="music" id="musics">
+                <div class="music-img">
+                    <img src="./assets/img/music-chill.jpg" alt="" />
+                </div>
+                <div class="container">
+                    <div class="music-title">
+                        <article class="section-heading">
+                            <span class="icon-heading">
+                                <ion-icon name="git-commit"> </ion-icon>
+                            </span>
+                            <h1>Music is my life!!!</h1>
+                        </article>
+                        <span class="music-desc"
+                            >(Âm nhạc là ngôn ngữ không lời của tâm hồn)
+                        </span>
+                    </div>
+                    <!-- Search -->
+                    <div class="music-find">
+                        <div class="youtube-thumb"></div>
+                        <!-- Search form -->
+                        <form action="" class="search-form">
+                            <input
+                                type="text"
+                                class="search-form__input"
+                                placeholder="Paste Youtube link here ..."
+                                type="url"
+                                value=""
+                                required
+                            />
+
+                            <!-- Submit button -->
+                            <button type="submit" class="search-form__btn">
+                                <ion-icon
+                                    name="search"
+                                    class="search-icon"
+                                ></ion-icon>
+                            </button>
+                            <!-- Clear button -->
+                            <button type="reset" class="search-form__clear">
+                                <ion-icon
+                                    name="close-circle-outline"
+                                    class="del-icon"
+                                ></ion-icon>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Tracklist -->
+                    <div class="music-list" id="songList">
+                        <audio
+                            id="audioPlayer"
+                            controls
+                            style="display: none"
+                        ></audio>
+
+                        <ul class="tracklist">
+                            <li
+                                onclick="playSong('./assets/music/LaKeDich.mp3')"
+                                class="list-music"
+                            >
+                                01. Là Kẻ Địch / 为敌
+                            </li>
+                            <li
+                                onclick="playSong('./assets/music/WindyHill.mp3')"
+                                class="list-music"
+                            >
+                                02. Windy Hill
+                            </li>
+                            <li
+                                onclick="playSong('./assets/music/MirrorMirror.mp3')"
+                                class="list-music"
+                            >
+                                03. Mirror Mirror
+                            </li>
+                            <li
+                                onclick="playSong('./assets/music/Serenade.mp3')"
+                                class="list-music"
+                            >
+                                04. Serenade
+                            </li>
+                            <li
+                                onclick="playSong('./assets/music/TheWitch&TheGirl.mp3')"
+                                class="list-music"
+                            >
+                                05. The Witch & The Girl
+                            </li>
+                            <li
+                                onclick="playSong('./assets/music/WitchingHour.mp3')"
+                                class="list-music"
+                            >
+                                06. Witching Hour
+                            </li>
+                            <li
+                                onclick="playSong('./assets/music/WolfKnight.mp3')"
+                                class="list-music"
+                            >
+                                07. Wolf's Knight
+                            </li>
+                            <li
+                                onclick="playSong('./assets/music/WolfSong.mp3')"
+                                class="list-music"
+                            >
+                                08. Wolf's Song
+                            </li>
+                            <li
+                                onclick="playSong('./assets/music/9.mp3')"
+                                class="list-music"
+                            >
+                                09. Vây giữ
+                            </li>
+                            <li
+                                onclick="playSong('./assets/music/10.mp3')"
+                                class="list-music"
+                            >
+                                10. Against the Odds
+                            </li>
+                        </ul>
+                    </div>
+                    <!--  control -->
+                    <div class="music-tab">
+                        <div class="music-playing">
+                            <span class="music-now">Now playing: </span>
+                            <span class="music-name"></span>
+                        </div>
+                        <input
+                            type="range"
+                            name="range"
+                            id="rangeMusic"
+                            class="range"
+                        />
+                        <audio src="./assets/music/1.mp3" id="song"></audio>
+                        <div class="timer">
+                            <div class="remaining">-3:10</div>
+                            <div class="duration">2:10</div>
+                        </div>
+                        <div class="controls">
+                            <ion-icon
+                                name="shuffle"
+                                class="play-random control-btn"
+                            ></ion-icon>
+                            <ion-icon
+                                name="play-back"
+                                class="play-back control-btn"
+                            ></ion-icon>
+                            <div class="play">
+                                <div class="player-inner">
+                                    <ion-icon
+                                        name="play"
+                                        class="play-icon control-btn"
+                                    ></ion-icon>
+                                </div>
+                            </div>
+                            <ion-icon
+                                name="play-forward"
+                                class="play-forward control-btn"
+                            ></ion-icon>
+                            <ion-icon
+                                name="repeat"
+                                class="play-repeat control-btn"
+                            ></ion-icon>
+                            <!-- Thanh điều chỉnh âm lượng -->
+                            <div class="music-volume">
+                                <ion-icon
+                                    name="volume-medium"
+                                    class="vol-range"
+                                ></ion-icon>
+                                <input
+                                    type="range"
+                                    id="volumeSlider"
+                                    class="vol-range"
+                                    min="0"
+                                    max="100"
+                                    value="50"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <script src="./chillMusic.js"></script>
+                </div>
+            </section>
+        </main>
+        <div class="copyright">
+            <p>&copy; Copyright Cherin Website</p>
+        </div>
+    </body>
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+</html>
