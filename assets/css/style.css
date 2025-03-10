@@ -146,7 +146,6 @@ body {
 }
 
 .music {
-    /* margin-top: 5000px; */
     position: relative;
     color: #fff;
 }
@@ -165,18 +164,18 @@ body {
 .music-tab {
     position: absolute;
 }
-.music .music-title {
+.music .music-title,
+.section-heading {
     display: flex;
     align-items: center;
     top: 30px;
+    gap: 12px;
 }
 .music-desc {
     font-size: 1.6rem;
     margin-left: 20px;
 }
-.section-heading:hover .icon-heading {
-    color: #fff;
-}
+
 .section-heading .icon-heading {
     margin-right: 12px;
 }
@@ -225,8 +224,8 @@ input {
     height: 24px;
 }
 .del-icon {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
 }
 .search-form__btn {
     color: rgba(22, 24, 35, 0.34);
@@ -237,8 +236,8 @@ input {
     color: #000;
 }
 .search-form__clear {
-    right: 40px;
-    top: 50%;
+    right: 45px;
+    top: 55%;
     transform: translateY(-50%);
     color: #f33;
     display: none;
@@ -294,9 +293,9 @@ input {
 .controls {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 16px;
     color: #ec1f55;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 .play {
     position: relative;
